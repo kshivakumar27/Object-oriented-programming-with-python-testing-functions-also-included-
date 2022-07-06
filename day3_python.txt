@@ -1,0 +1,160 @@
+Arithmetic -- ZeroDivisionError
+
+classNotFoundExe -- Name Error
+
+typecasting -- type error
+
+-- Indentation Error
+
+IOError
+
+try:
+    a = 10
+    b = 0
+    res = a / b
+    print(res)
+except Exception as e:
+    print("program crashed bcoz of -- ", e)
+
+print("end of the program")
+----------------------
+try:
+    a = 10
+    b =0
+    res = a / b
+    print(res)
+except Exception as e:
+    print("program crashed bcoz of -- ", e)
+else:
+    print("no exception")
+finally:
+    print("this is my finally block")
+
+print("end of the program")
+----------------------
+
+try:
+    a = 10
+    b =0
+    res = a / b
+    print(res)
+except ValueError as ve:
+    print("program crashed bcoz of VE-- ", ve)
+except ZeroDivisionError as ze:
+    print("program crashed bcoz of ZE -- ",ze)
+except Exception as e:
+    print("program crashed bcoz of -- ", e)
+
+else:
+    print("no exception")
+finally:
+    print("this is my finally block")
+
+print("end of the program")
+
+----------------------
+
+
+try:
+    try:
+        file = open("myfile", "r")
+        print(file.read())
+    except Exception as e:
+        print("program crashed bcoz of EX -- ", e)
+    a = 10
+    b =0
+    res = a / b
+    print(res)
+
+except ValueError as ve:
+    print("program crashed bcoz of VE-- ", ve)
+except ZeroDivisionError as ze:
+    print("program crashed bcoz of ZE -- ",ze)
+except Exception as e:
+    print("program crashed bcoz of EX -- ", e)
+
+else:
+    print("no exception")
+finally:
+    print("this is my finally block")
+
+print("end of the program")
+
+----------------------
+
+try:
+    a = 10
+    b =0
+    res = a / b
+    print(res)
+except (ValueError, ZeroDivisionError, Exception) as e:
+    print("program crashed bcoz of -- ", e)
+
+----------------------
+
+userInput = int(input("Enter your age "))
+
+try:
+    if (userInput <= 0):
+        raise ValueError
+except ValueError as ve:
+    print("User you have entered invalid input")
+
+----------------------------------------------------------------------------------------
+
+def add(a,b):
+    return a + b
+
+def sub(a,b):
+    return a - b
+
+def mul(a,b,c):
+    return a * b * c
+
+def div(a,b):
+    return a/b
+----------------------------------------------------------------------------------------
+
+import Calculations
+
+print(Calculations.add(4,5))
+print(Calculations.sub(14,9))
+
+-------------
+
+import Calculations as ca
+
+print(ca.mul(3,4,5))
+
+-------------
+from Calculations import add as a, mul as m
+
+print(a(4,5))
+print(m(5,4,6))
+-------------
+
+import math
+
+print(dir(math))
+
+----------------------------------------------------
+
+Packages
+
+from MyCalculaitonspackage import Calculations as ca
+
+from MyCalculaitonspackage import add,mul
+-------------
+__init__
+
+from .Calculations import add,mul
+
+
+
+
+
+
+
+
+
+
