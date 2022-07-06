@@ -1,0 +1,283 @@
+class Mammal:
+    mamal_legs = 4
+    def mammal_sound(self):
+        print("mamal makes sound")
+
+class Animal(Mammal):
+    animallegs = 4
+    def animal_sound(self):
+        print("Animal makes sound")
+
+
+class Tiger(Animal):
+
+    legs = 4
+    city = "bangalore"
+    state = ""
+
+    def animal_sound(self):
+        #super().animal_sound(self)
+        print("overing animal sound BIG ROAR")
+
+    def __init__(self,state):
+        self.state = state
+
+    def tiger_roar(self, country):
+        print("tiger roars")
+        print(f"tiger is from {self.city} and state is {self.state} and countyr is {country}")
+
+tiger = Tiger("karnataka")
+tiger.animal_sound()
+tiger.mammal_sound()
+
+
+
+--------------------------------
+        
+class Tiger():
+
+    legs = 4
+    city = "bangalore"
+    state = ""
+
+    def animal_sound(self):
+        #super().animal_sound(self)
+        print("overing animal sound BIG ROAR")
+
+    def __init__(self,state):
+        self.state = state
+
+    def tiger_roar(self, country):
+        print("tiger roars")
+        print(f"tiger is from {self.city} and state is {self.state} and countyr is {country}")
+
+
+class Cub(Lion, Tiger):
+    def cub_sound(self):
+        print("cub makes sound")
+
+cub = Cub()
+cub.lion_sound()
+cub.tiger_roar()
+
+--------------------------------
+
+
+class Lion:
+    def lion_sound(self):
+        print("lion sound")
+
+    def playing(self):
+        print("lion playing")
+
+class Tiger():
+
+    legs = 4
+    city = "bangalore"
+    state = ""
+
+    def playing(self):
+        print("Tiger playing")
+
+    def animal_sound(self):
+        #super().animal_sound(self)
+        print("overing animal sound BIG ROAR")
+
+
+
+    def tiger_roar(self, country):
+        print("tiger roars")
+        print(f"tiger is from {self.city} and state is {self.state} and countyr is {country}")
+
+
+class Cub(Tiger, Lion):
+    def cub_sound(self):
+        print("cub makes sound")
+
+cub = Cub()
+
+
+
+--------------------------------
+
+
+from abc import ABC,abstractmethod
+
+class LTTS_Employee(ABC):
+    @abstractmethod
+    def security(self):
+        pass
+
+    @abstractmethod
+    def mask(self):
+        pass
+
+    def lunch(self):
+        print("have lunch")
+
+class Hardware_Employees(LTTS_Employee):
+
+    def security(self):
+        print("use id cards")
+
+    def mask(self):
+        print("use cloth mask")
+
+class Software_Employees(LTTS_Employee):
+    def security(self):
+        print("use id finger printer scanner")
+
+    def mask(self):
+        print("use n92 mask")
+
+    def lunch(self):
+        print("will take lunch in office")
+
+
+h_emp = Hardware_Employees()
+s_emp = Software_Employees()
+
+h_emp.security()
+
+--------------------------------
+
+Access modifiers
+
+public, private, protected
+
+class Tiger():
+
+    legs = 4
+    __city = "bangalore"  #private variable
+    _state = "karnatkae" #protected variable
+
+    def playing(self):
+        print("Tiger playing")
+
+    def animal_sound(self):
+        #super().animal_sound(self)
+        print("overing animal sound BIG ROAR")
+
+tiger = Tiger()
+
+print(tiger._Tiger__city)
+
+print(tiger._state)
+
+
+
+--------------------------------
+
+
+class Tiger():
+    """
+    This is a tiger class used for demo of access variables
+    """
+
+    legs = 4
+    __city = "bangalore"  #private variable
+    _state = "karnatkae" #protected variable
+
+    def playing(self):
+        """
+        used for demo of func
+        :return:      
+        does't return
+        """
+        print("Tiger playing")
+
+    def animal_sound(self):
+        #super().animal_sound(self)
+        print("overing animal sound BIG ROAR")
+
+tiger = Tiger()
+
+print(tiger._Tiger__city)
+
+print(tiger._state)
+
+
+--------------------------------
+
+
+
+legs = 4
+
+def my_fun():
+    legs = 5
+    print(f"legs inside method are {legs}")
+
+print("legs outside the method are " , legs)
+
+my_fun()
+
+--------------
+legs = 4
+
+def my_fun():
+    global legs
+    legs = 5
+    print(f"legs inside method are {legs}")
+
+my_fun()
+print(f"legs outside method are {legs}")
+
+
+--------------------------------
+
+class Animal():
+    animallegs = 4
+
+    # instance method
+    def setAnimalLegs(self):  
+        animallegs = 10  # instance varibale
+        print("Animal legs are ", animallegs)
+
+    @classmethod
+    def changeLegs(cls):
+        cls.animallegs = 5
+        print("in class method legs are ", cls.animallegs)
+
+    @staticmethod
+    def myMethodlegs():
+        print("static method")
+
+animal = Animal()
+
+Animal.myMethodlegs()
+
+
+
+# print(f"animal legs are {animal.animallegs}")
+#
+# Animal.changeLegs()
+#
+# print(f"animal legs are {Animal.animallegs}")
+
+
+
+# print(f"animal legs are {animal.animallegs}")
+#
+# animal.setAnimalLegs()
+#
+# print(f"animal legs are {animal.animallegs}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
