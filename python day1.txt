@@ -1,0 +1,170 @@
+1. easy lang -- easy to learn
+2. rich libraries --- it makes programming faster -- developer life easy -- more concise
+3. automation scripting, desktop, mobile(kivyy), web, protocols, testing, AI/ML / DE
+4. Platform indepedent / os / HLL
+5. Functional / OOPs
+
+
+
+
+
+dynamically typed
+interpereted lang / complied lang
+
+
+
+OOPs
+1. Code Reusablity
+2. Modularity
+3. Security
+4. Debugging / TS
+5.
+
+
+
+Principles of OOPs
+1. Inheritance
+2. Polymorphsim
+3. Encapsulation
+4. Abstraction
+
+
+
+
+class n Object
+
+
+
+class Tiger:
+legs = 4
+city = "bangalore"
+
+
+
+def tiger_roar(self):
+print("tiger roars")
+
+
+
+tiger = Tiger()
+print(f"tiger from city {tiger.city}")
+print(tiger.legs)
+
+
+
+tiger.tiger_roar()
+
+
+
+
+------------------------------
+Function and Method
+Constructor
+
+
+
+
+class Tiger:
+
+
+
+# def __init__(self):
+# print("this is my constructor")
+
+
+
+def __init__(self,age):
+print(f"age of tiger is {age}")
+
+
+
+
+legs = 4
+city = "bangalore"
+
+
+
+def tiger_roar(self):
+print("tiger roars")
+print(id(self))
+
+
+
+tiger = Tiger(44)
+
+
+
+--------------------------------------------
+
+
+
+class Tiger:
+
+
+
+#in python there is not constructor overloading nor method overloading
+def __init__(self):
+print("this is my constructor")
+
+
+
+def __init__(self,age):
+print(f"age of tiger is {age}")
+
+
+
+def __init__(self,age,city):
+print(f"age of tiger is {age} and city is {city}")
+
+
+
+legs = 4
+city = "bangalore"
+
+
+
+def tiger_roar(self):
+print("tiger roars")
+print(id(self))
+
+
+
+tiger = Tiger(55, "blpre")
+
+
+
+
+--------------------------------------------
+
+
+
+
+
+class Tiger:
+
+
+
+#in python there is not constructor overloading nor method overloading
+
+
+
+legs = 4
+city = "bangalore"
+state = ""
+
+
+
+def __init__(self,state):
+self.state = state
+
+
+
+def tiger_roar(self):
+print("tiger roars")
+print(f"tiger is from {self.city} and state is {self.state}")
+
+
+
+tiger = Tiger("karnataka")
+tiger.tiger_roar()
+
